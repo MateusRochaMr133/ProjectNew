@@ -1,38 +1,31 @@
-body, textarea {
-    margin: 0;
+body, textarea{
     padding: 0;
+    margin: 0;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+    list-style: none;
 }
-
-h1 h2 h3 {
+h1,h2,h3{
     color: #333;
 }
-
-p {
-    color: #70747A;
+p{
+    color: #70747a;
 }
-
-/* navbar */
-.navbar-container {
+.navbar-container{
     width: 100%;
+    background-color: #232a31;
     height: 80px;
-    background-color: #232A31;
     padding: 0 2em;
     position: relative;
     box-sizing: border-box;
 }
-
-.logo {
+.logo{
     width: 50px;
     margin-top: 15px;
 }
-
-nav {
+nav{
     position: relative;
 }
-
-.navbar-items {
+.navbar-items{
     position: absolute;
     right: 0;
     top: 0;
@@ -40,61 +33,183 @@ nav {
     height: 80px;
     line-height: 80px;
 }
-
-.navbar-items li {
+.navbar-items li{
     display: inline-block;
     text-transform: initial;
-    margin-left: 25px;
+    padding-left: 25px;
+    transition: transform 100ms linear, opacity 200ms ease-in-out;
 }
+.navbar-items li:hover{
+    transform: scale(1.08);
 
-.navbar-items li a {
-    color: #FFF;
+}
+.navbar-items li a{
+    color: #fff;
     text-decoration: none;
-    transition: .5s;
+    transition: transform 100ms linear, opacity 200ms ease-in-out;
 }
+.navbar-items li a:hover{
+    color: #ccc;
 
-.navbar-items li a:hover {
-    color: #CCC;
 }
-
-.default-btn {
+.default-btn{
     padding: 15px 20px;
-    background-color: #2CC76A;
-    border-radius: 10px;
+    background-color: #2cc76a;
+    border-radius: 5px;
 }
-
-.default-btn:hover {
-    background-color: #189c4d;
-}
-
-.main-banner {
-    background-image: url('../img/mainbanner.png');
+.main-banner{
+    background-image: url(../img/mainbanner.png);
     background-size: cover;
     background-position: center;
-    padding: 10em 0;  
+    padding: 10em 0;
     text-align: center;
 }
-
-.main-banner h1, .main-banner p {
-    color: #FFF;
+.main-banner h1, .main-banner p{
+    color: #fff;
     font-weight: bold;
 }
-
-.main-banner h1 {
-    font-size: 54px;
+.main-banner h1{
+    font-size :54px;
 }
-
-.main-banner p {
+.main-banner p{
     font-size: 32px;
 }
-
-.specialties-container {
+.specialties-container{
     padding: 5em 0;
 }
-
-.specialties-container ul {
+.specialties-container ul{
     display: flex;
+    /*flex-direction: row;
+    flex-wrap: nowrap;*/
     width: 90%;
+    list-style: none;
     margin: 0 auto;
     padding-left: 0;
 }
+.specialties-container ul li{
+    text-align: center;
+    padding: 20px;
+}
+.fas{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+.fa-shield-alt{
+    color: #2CC76A;
+}
+.fa-rocket{
+    color: #EF3f29;
+}
+.fa-comments{
+    color: #EF8F29;
+}
+.specialties-container ul li h3{
+    margin-bottom: 25px;
+    color: #333;
+}
+.specialties-container ul li p{
+    line-height: 24px;
+    color: #70747a;
+}
+
+.plans-container{
+    display: flex;
+    justify-content: space-between; /*Espaçamento entre os filhos.*/
+    width: 90%;
+    margin: 50px auto 0;
+}
+.pricing-container{
+    padding-bottom: 5em;
+    text-align: center;
+}
+.pricing-container h2{
+    font-size: 36px;
+    margin-top: 0;
+}
+.pricing-container p{
+    font-size: 20px;
+
+}
+.plan{
+    width: 300px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.plan li {
+    height: 50px;
+    line-height: 50px;
+    background-color: #e8e9ea;
+    list-style: none;
+}
+.plan .price{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #2cc76a;
+    color: #fff;
+    text-align: center;
+    line-height: 160px;
+    font-size: 18px;
+    margin: 0 auto;
+    position: relative;
+    top:50px;
+}
+.plan .plan-name{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #202b34;
+    padding: 50px 0 20px 0;
+
+}
+.plan .plan-btn{
+    background-color: #2cc76a;
+    color: #fff;
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+}
+.plan .recommended{
+    background-color: #EF3f29;
+}
+.searchdomain-container{
+    background-color: #34454e;
+    text-align: center;
+    padding: 5em 0;
+}
+.searchdomain-container h2{
+    color: #fff;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.searchdomain-container p{
+    color: #D5D5D5;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.searchdomain-container input{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+}
+.searchdomain-container input[type=text]{
+    margin-bottom: 25px;
+    width: 60%;
+    font-size: 20px;
+    padding: 20px;
+}
+.searchdomain-container input[type=submit]{
+    background-color: #2cc76a;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 24px;
+}
+
+/*Pseudo-classe é um estado quando o usuário faz uma ação ":"*/
+/*Pseudo-elemento representa uma parte do elemento a primeira linha, a última linha "::"*/
+/*space-evenly; Espaçamento com padding*/
